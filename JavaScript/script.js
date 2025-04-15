@@ -48,4 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Initial Validation
   validateForm();
+
+  //Handling form submission
+  loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    //validate again
+    if (!submitBtn.disabled) {
+      //Redirect to dashboard
+      window.location.href = "dashboard.html";
+    }
+  });
 });
